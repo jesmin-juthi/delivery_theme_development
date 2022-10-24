@@ -493,10 +493,14 @@
             </svg>
 
             <div class="home__data">
-                <h1 class="home__title">Order Products <br> Faster Easier</h1>
-                <p class="home__description">Order your favorite foods at any time and we will deliver them right to where you are.</p>
+                <h1 class="home__title">
+                    <?php echo get_theme_mod("header_title_settings"); ?>
+                </h1>
+                <p class="home__description">
+                    <?php echo get_theme_mod("header_desc_s"); ?>
+                </p>
 
-                <a href="#" class="button">Get Started</a>
+                <a href="#" class="button"><?php echo get_theme_mod("header_btn_s"); ?></a>
 
             </div>
         </div>

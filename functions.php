@@ -18,3 +18,5 @@ add_action("after_setup_theme", "delivery_theme_setup");
     }
 
 add_action("wp_enqueue_scripts","delivery_assets_files");
+
+require_once get_theme_file_path("inc/option-panel/customizer.php");

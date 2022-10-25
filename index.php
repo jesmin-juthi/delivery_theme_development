@@ -510,9 +510,9 @@
     <section class="about section container" id="about">
         <div class="about__container grid">
             <div class="about__data">
-                <h2 class="section__title-center">Find Out A Little More <br> About Us</h2>
-                <p class="about__description">We are a company dedicated to the distribution of products by delivery
-                    to your home or to the place where you are, with the best quality of delivery.
+                <h2 class="section__title-center"><?php echo get_theme_mod('about_header_s'); ?></h2>
+                <p class="about__description">
+                    <?php echo get_theme_mod('about_desc_s'); ?>
                 </p>
             </div>
 

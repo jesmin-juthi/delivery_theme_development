@@ -24,6 +24,7 @@
 		]);
 		$wp_customize->add_control("header_desc_c", [
 			"label"		=> "Header Description",
+			"type"		=> "text",
 			"section"	=> "delivery_theme_option",
 			"settings"	=> "header_desc_s"
 		]);
@@ -35,8 +36,33 @@
 		]);
 		$wp_customize->add_control("header_btn_c", [
 			"label"		=> "Header Button Text",
+			"type"		=> "text",
 			"section"	=> "delivery_theme_option",
 			"settings"	=> "header_btn_s"
+		]);
+		// about header
+		$wp_customize->add_setting("about_header_s", [
+			"default"	=> "Find Out A Little More About Us",
+			"transport"	=> "refresh",
+			"type"		=> "theme_mod"
+		]);
+		$wp_customize->add_control("about_header_c", [
+			"label"		=> "About Section Header",
+			"type"		=> "text",
+			"section" 	=> "delivery_theme_option",
+			"settings"	=> "about_header_s"
+		]);
+		// about description
+		$wp_customize->add_setting("about_desc_s", [
+			"default"	=> "We are a company dedicated to the distribution of products by delivery to your home or to the place where you are, with the best quality of delivery.",
+			"transport"	=> "refresh",
+			"type"		=> "theme_mod"
+		]);
+		$wp_customize->add_control("about_desc_c", [
+			"label"		=> "About Section Description",
+			"type"		=> "textarea",
+			"section"	=> "delivery_theme_option",
+			"settings"	=> "about_desc_s"
 		]);
 	}
 

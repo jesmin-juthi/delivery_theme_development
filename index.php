@@ -14,7 +14,16 @@
                     <?php echo get_theme_mod("header_desc_s"); ?>
                 </p>
 
-                <a href="#" style="background: <?php echo get_theme_mod('header_btn_bg', 'yellow'); ?>;color: <?php echo get_theme_mod('header_btn_color', '#000'); ?>" class="button"><?php echo get_theme_mod("header_btn_s"); ?></a>
+                <?php 
+
+                    if(get_theme_mod("header_btn_s"))
+                    { ?>
+                         <a href="#" style="background: <?php echo get_theme_mod('header_btn_bg', 'yellow'); ?>;color: <?php echo get_theme_mod('header_btn_color', '#000'); ?>" class="button"><?php echo get_theme_mod("header_btn_s"); ?></a>
+                  <?php  }
+
+                 ?>
+
+               
 
             </div>
         </div>

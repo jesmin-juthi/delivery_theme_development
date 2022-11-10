@@ -12,7 +12,7 @@
         <a href="#" class="nav__logo">Delivery</a>
 
         <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list">
+            <!-- <ul class="nav__list">
                 <li class="nav__item">
                     <a href="#home" class="nav__link active-link">Home</a>
                 </li>
@@ -27,7 +27,18 @@
                 </li>
 
                 <i class='bx bx-toggle-left change-theme' id="theme-button"></i>
-            </ul>
+            </ul> -->
+
+            <?php 
+                $primary_menu = wp_nav_menu( array(
+                    'theme_location'  => 'primary',
+                    'container'       => 'ul',
+                    'menu_class'      => 'nav__list',
+                    'echo'            => false,
+                ) );
+                $primary_menu = str_replace('menu-item', 'menu-item nav__item', $primary_menu);
+                echo $primary_menu;
+             ?>
         </div>
 
         <div class="nav__toggle" id="nav-toggle">

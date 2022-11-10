@@ -1,3 +1,11 @@
+// add class to menu items / links
+
+const menuLink = document.querySelectorAll('.nav__item a');
+menuLink.forEach(link => {
+    link.classList.add('nav__link')
+});
+
+
 /*=============== SHOW MENU ===============*/
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),

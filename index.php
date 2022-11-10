@@ -33,13 +33,12 @@
     <section class="about section container" id="about">
         <div class="about__container grid">
             <div class="about__data">
-                <h2 class="section__title-center"><?php echo get_theme_mod('about_header_s'); ?></h2>
-                <p class="about__description">
+                <h2 class="section__title-center" style="color: <?php echo get_theme_mod('abt_title_color', '#222'); ?> "><?php echo get_theme_mod('about_header_s'); ?></h2>
+                <p class="about__description" style="color: <?php echo get_theme_mod('abt_desc_color', '#eee'); ?> ">
                     <?php echo get_theme_mod('about_desc_s'); ?>
                 </p>
             </div>
-
-            <img class="about__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/2.png" alt="">
+            <img class="about__img" src="<?php echo wp_get_attachment_image_url( get_theme_mod('abt_img'), 'full' ); ?>" alt="">
         </div>
     </section>
 
@@ -47,13 +46,13 @@
     <section class="security section container">
         <div class="security__container grid">
             <div class="security__data">
-                <h2 class="section__title-center">Your Safety Is <br> Important</h2>
-                <p class="security__description">When your order reaches you, we have the health safety protocols,
-                    so that you are protected from any disease. Watch the video of how the delivery is made.
+                <h2 class="section__title-center" style="color: <?php echo get_theme_mod('scrt_title_color', '#222'); ?> "><?php echo get_theme_mod('scrt_header_s'); ?></h2>
+                <p class="security__description" style="color: <?php echo get_theme_mod('scrt_desc_color', '#eee'); ?> ">
+                    <?php echo get_theme_mod('scrt_desc_s'); ?>
                 </p>
             </div>
 
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/3.png" alt="">
+            <img src="<?php echo wp_get_attachment_image_url( get_theme_mod('scrt_img'), 'full' ); ?>" alt="">
         </div>
     </section>
 

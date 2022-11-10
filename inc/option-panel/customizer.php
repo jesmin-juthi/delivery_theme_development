@@ -90,6 +90,9 @@
 			"section"	=> "delivery_theme_option",
 			"settings"	=> "hero_img"
 		]));
+
+		//=============================================== 
+
 		// about header
 		$wp_customize->add_setting("about_header_s", [
 			"default"	=> "Find Out A Little More About Us",
@@ -102,6 +105,16 @@
 			"section" 	=> "delivery_theme_option",
 			"settings"	=> "about_header_s"
 		]);
+		// about title color 
+		$wp_customize->add_setting("abt_title_color", [
+			"transport"	=> "refresh",
+			"type"		=> "theme_mod"
+		]);
+		$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, "abt_title_color_c",[
+			"label"		=> "About Title Color",
+			"section"	=> "delivery_theme_option",
+			"settings"	=> "abt_title_color"
+		]));
 		// about description
 		$wp_customize->add_setting("about_desc_s", [
 			"default"	=> "We are a company dedicated to the distribution of products by delivery to your home or to the place where you are, with the best quality of delivery.",
@@ -114,6 +127,83 @@
 			"section"	=> "delivery_theme_option",
 			"settings"	=> "about_desc_s"
 		]);
+		// about description color 
+		$wp_customize->add_setting("abt_desc_color", [
+			"transport"	=> "refresh",
+			"type"		=> "theme_mod"
+		]);
+		$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, "abt_desc_color_c",[
+			"label"		=> "About Description Color",
+			"section"	=> "delivery_theme_option",
+			"settings"	=> "abt_desc_color"
+		]));
+		// about img
+		$wp_customize->add_setting("abt_img", [
+			"transport"	=> "refresh",
+			"type"		=> "theme_mod"
+		]);
+		$wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, "abt_img_c",[
+			"label"		=> "About Section Image",
+			"section"	=> "delivery_theme_option",
+			"settings"	=> "abt_img"
+		]));
+
+		// ===============================================================
+		// Security header
+		$wp_customize->add_setting("scrt_header_s", [
+			"default"	=> "Your Safety Is Important",
+			"transport"	=> "refresh",
+			"type"		=> "theme_mod"
+		]);
+		$wp_customize->add_control("scrt_header_c", [
+			"label"		=> "Security Section Header",
+			"type"		=> "text",
+			"section" 	=> "delivery_theme_option",
+			"settings"	=> "scrt_header_s"
+		]);
+		// Security title color 
+		$wp_customize->add_setting("scrt_title_color", [
+			"transport"	=> "refresh",
+			"type"		=> "theme_mod"
+		]);
+		$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, "scrt_title_color_c",[
+			"label"		=> "Security Title Color",
+			"section"	=> "delivery_theme_option",
+			"settings"	=> "scrt_title_color"
+		]));
+		// Security description
+		$wp_customize->add_setting("scrt_desc_s", [
+			"default"	=> "When your order reaches you, we have the health safety protocols, so that you are protected from any disease. Watch the video of how the delivery is made.",
+			"transport"	=> "refresh",
+			"type"		=> "theme_mod"
+		]);
+		$wp_customize->add_control("scrt_desc_c", [
+			"label"		=> "Security Section Description",
+			"type"		=> "textarea",
+			"section"	=> "delivery_theme_option",
+			"settings"	=> "scrt_desc_s"
+		]);
+		// Security description color 
+		$wp_customize->add_setting("scrt_desc_color", [
+			"transport"	=> "refresh",
+			"type"		=> "theme_mod"
+		]);
+		$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, "scrt_desc_color_c",[
+			"label"		=> "Security Description Color",
+			"section"	=> "delivery_theme_option",
+			"settings"	=> "scrt_desc_color"
+		]));
+		// Security img
+		$wp_customize->add_setting("scrt_img", [
+			"transport"	=> "refresh",
+			"type"		=> "theme_mod"
+		]);
+		$wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, "scrt_img_c",[
+			"label"		=> "Security Section Image",
+			"section"	=> "delivery_theme_option",
+			"settings"	=> "scrt_img"
+		]));
+
 	}
 
 	add_action("customize_register", "delivery_customizer");
